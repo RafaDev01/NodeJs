@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>contactos</h1>
+    <div>
+        <a href="/">Home</a>&nbsp;&nbsp;
+        <a href="/about">About</a>&nbsp;&nbsp;
+        <a href="/contatos">Contatos</a>
+    </div>
+    <p>asdasdasdasdasdasdas contatos</p>
+
+    <% if(servicos.length > 0){ %>
+        <% servicos.forEach(servico => { %>
+            <h3><%= servico.titulo_servico %></h3>
+            <p><%= servico.descricao %></p>
+            <hr>
+        <% }) %>
+    <% } else { %>
+        <p>Não foram encotrados servicos</p>
+    <% } %>
+
+</body>
+</html>
