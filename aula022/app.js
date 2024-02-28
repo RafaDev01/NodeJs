@@ -1,4 +1,5 @@
 const express = require('express')
+var morgan = require('morgan')
 
 //cria uma aplicação express
 const app = express()
@@ -7,9 +8,14 @@ const app = express()
 app.set('view engine', 'ejs')
 //app.set('views', 'visual')
 
+//----------------------------------------------------
+// middleware
+app.use(morgan('dev'))
+
 //escutar os requests
 app.listen(3000)
 
+//--------------------------------------------------
 //routes
 app.get('/', (req, res)=>{
     //res.send('<h1>Teste</h1>')
