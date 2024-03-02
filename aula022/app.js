@@ -10,7 +10,10 @@ app.set('view engine', 'ejs')
 
 //----------------------------------------------------
 // middleware
+app.use(express.static('public'))
+
 app.use(morgan('dev'))
+app.use(morgan('O método é: :method'))
 
 //escutar os requests
 app.listen(3000)
